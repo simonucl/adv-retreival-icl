@@ -1,0 +1,4 @@
+{
+  0 : "{}\n The question is: {}. True or False?\nThe Answer is: {}"
+  # 0 : "Premise: {}\nHypothesis: {}\nPrediction: {}"
+}

@@ -1,0 +1,2 @@
+from .TextBuggerCustom import TextBuggerCustom
+from .TextFoolerCustom import TextFoolerCustom

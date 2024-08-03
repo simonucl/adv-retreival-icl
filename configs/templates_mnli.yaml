@@ -1,0 +1,5 @@
+{
+  # 0 : "Suppose \"{}\". Can we infer that \"{}\"?. The answer should be exactly \"yes\", \"maybe\" or \"no\".\nThe Answer is: {}",
+  0 : "Premise: {}\nHypothesis: {}\nPrediction: {}",
+  # 0 : "'{}' Based on the previous passage, is it true that '{}'? yes, no or maybe? {}",
+}
