@@ -3,9 +3,6 @@
 # MODEL_TYPE=$3 # [icl | knn_icl | retrieval_icl | retrieval_icl_attack ]
 # TOTAL_BATCH=$4
 
-# replace '/' with '_'
-MODEL_NAME=${MODEL//\//_}
-
 # wait until this command is finished then next 
 DATASET=rte
 # MODELS=(meta-llama/Llama-2-13b-hf mistralai/Mistral-7B-v0.1 lmsys/vicuna-7b-v1.5 mistralai/Mistral-7B-Instruct-v0.1 google/gemma-7b mistralai/Mixtral-8x7B-v0.1 mistralai/Mixtral-8x7B-Instruct-v0.1)

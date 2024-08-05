@@ -16,20 +16,32 @@ Following the above instructions with the installed egg package for running expe
 ### 1. Running Main Experiments
 ```bash
 MODEL=meta-llama/Llama-2-7b-hf
+DATASET=rte # sst2|rte|mnli|cr|mr|trec
+ATTACK=textfooler
+
 # Vanilla ICL
-bash scripts/icl/attack.sh \
-      [sst2|rte|mnli|cr|mr|trec] \
-      $MODEL \
-      icl \
-      textfooler
+bash scripts/icl/attack.sh $DATASET $MODEL icl $ATTACK
 
 # kNN-ICL
+bash scripts/knn_icl/attack.sh $DATASET $MODEL knn_icl $ATTACK
 
-# Retrieval-base ICL
-bash scripts/ralm/attack.sh
+# Retrieval ICL
+bash scripts/ralm/attack.sh $DATASET $MODEL retrieval_icl $ATTACK
 ```
 
 ### 2. Running Ablation Experiments
+```bash
+# Section 4.3: Ablation Study
+bash scripts/scaling_model/scale_model_icl.sh
+bash scripts/scaling_model/scale_model_ricl.sh
+
+# Section 4.4: Transferable attack
+bash scripts/transferable/transfer_llama_7b.sh
+bash scripts/transferable/transfer_llama_70b.sh
+
+bash scripts/transferable/transfer_mistral.sh
+bash scripts/transferable/transfer_mistral_moe.sh
+```
 
 ### 3. Citation
 ```bib
